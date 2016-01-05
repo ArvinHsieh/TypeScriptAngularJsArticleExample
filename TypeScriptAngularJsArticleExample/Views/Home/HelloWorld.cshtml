@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "HelloWorld";
+}
+
+<h2>HelloWorld Demo</h2>
+
+<div ng-controller="HelloWorldCtrl">
+    <span ng-bind="model.Message"></span><br />
+    <input type="button" value="Say Hello" ng-click="SayHello()" />
+    <br />
+    <br />
+    <br />
+    <form  method="post">
+        <input type="submit" value="送出表單" submit-auto-disable="請稍後..." /><br />
+        <input type="submit" value="送出表單 Block UI" submit-auto-block />
+    </form>
+    <br />
+    <br />
+    <br />
+    <input type="button" value="取得書籍資料" ng-click="GetBookInfo()" />
+    <div>
+        編號:<span ng-bind="model.BookInfo.ID"></span><br />
+        書名:<span ng-bind="model.BookInfo.BookName"></span><br />
+        作者:<span ng-bind="model.BookInfo.BookAuthor"></span><br />
+    </div>
+</div>
