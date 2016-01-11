@@ -72,7 +72,7 @@
     appModules.forEach((module: string) => angular.module(module, []));
     appModules = appModules.concat(trirdpartyModules);
     angular.module("ExampleApp", appModules)
-        .provider(ExceptionHandlerProvider)
-        .config(Config);
+        .config(Config)
+        .provider(ExceptionHandlerProvider.$name, ExceptionHandlerProvider);
     
 }

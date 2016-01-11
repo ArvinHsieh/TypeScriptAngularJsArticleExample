@@ -4,9 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/angular-block-ui.css" rel="stylesheet" />
+    @Styles.Render("~/bundles/css/base")
 </head>
 <body ng-app="ExampleApp">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -34,14 +32,10 @@
         </footer>
     </div>
 
-    <script src="~/Scripts/libs/jquery/jquery-2.1.4.js"></script>
-    <script src="~/Scripts/libs/angular/angular.js"></script>
-    <script src="~/Scripts/libs/angular/angular-block-ui.js"></script>
-    <script src="~/Scripts/app/App.js"></script>
-    <script src="~/Scripts/app/common/Common.Directive.js"></script>
-    <script src="~/Scripts/app/home/HelloWorld.ViewModel.js"></script>
-    <script src="~/Scripts/app/home/HelloWorld.Service.js"></script>
-    <script src="~/Scripts/app/home/HelloWorld.Controller.js"></script>
+    @Scripts.Render("~/bundles/script/base")
+    @Scripts.Render("~/bundles/script/app")
+
+    @Html.RenderControllerJs()
 
 </body>
 </html>

@@ -69,6 +69,8 @@ var ExampleApp;
     ];
     appModules.forEach(function (module) { return angular.module(module, []); });
     appModules = appModules.concat(trirdpartyModules);
-    angular.module("ExampleApp", appModules).config(Config);
+    angular.module("ExampleApp", appModules)
+        .config(Config)
+        .provider(ExceptionHandlerProvider.$name, ExceptionHandlerProvider);
 })(ExampleApp || (ExampleApp = {}));
 //# sourceMappingURL=App.js.map
